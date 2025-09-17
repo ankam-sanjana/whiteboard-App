@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+canvas {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background: white;
+}
+
+.sticky {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background: yellow;
+  padding: 10px;
+  resize: both;
+  overflow: auto;
+  border: 1px solid #444;
+  cursor: move;
+  min-width: 100px;
+  min-height: 80px;
+}
+
+.sticky img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.sticky-header {
+  display: flex;
+  justify-content: flex-end;
+  background: #444;
+  color: white;
+  padding: 2px;
+  cursor: move;
+}
+
+.sticky-header button {
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 4px;
+
+}
+
+.sticky-header button.minimize {
+  background: orange;
+  margin-right: 5px;
+}
+
+
