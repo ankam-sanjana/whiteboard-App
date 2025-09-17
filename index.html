@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whiteboard App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <select id="font-family">
+  <option value="Arial" selected>Arial</option>
+  <option value="Times New Roman">Times New Roman</option>
+  <option value="Courier New">Courier New</option>
+  <option value="Verdana">Verdana</option>
+  <option value="Georgia">Georgia</option>
+</select>
+
+<select id="font-size">
+  <option value="16">16px</option>
+  <option value="20" selected>20px</option>
+  <option value="24">24px</option>
+  <option value="32">32px</option>
+  <option value="40">40px</option>
+  <option value="48">48px</option>
+</select>
+
+<button id="bold">B</button>
+<button id="italic">I</button>
+
+  <div class="toolbar">
+    <button id="pencil">✏️ Pencil</button>
+    <input type="color" id="color" value="#000000"/>
+    <input type="range" id="size" min="1" max="20" value="2"/>
+    <button id="eraser">🩹 Eraser</button>
+    <button id="undo">↩️ Undo</button>
+    <button id="redo">↪️ Redo</button>
+    <button id="line">📏 Line</button>
+    <button id="rect">⬛ Rectangle</button>
+    <button id="circle">⚪ Circle</button>
+    <button id="text">🅰️ Text</button>
+    <select id="font-family">
+      <option value="Arial">Arial</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Times New Roman">Times New Roman</option>
+    </select>
+    <input type="number" id="font-size" min="10" max="100" value="20"/>
+    <button id="bold">B</button>
+    <button id="italic">I</button>
+    <button id="note">🟨 Sticky Note</button>
+    <button id="image">🖼️ Sticky Image</button>
+    <button id="download">⬇️ Download</button>
+    <button id="clear">🗑️ Clear</button>
+    <input type="color" id="color" value="#000000"/>
+    <input type="range" id="size" min="1" max="20" value="2"/>
+  </div>
+
+  <canvas id="board"></canvas>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
